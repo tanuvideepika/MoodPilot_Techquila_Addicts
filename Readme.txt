@@ -1,1 +1,0 @@
-This is MoodPilot by Techquila Addicts for Hackfest 2023
