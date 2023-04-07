@@ -1,0 +1,29 @@
+body{
+    background-color: rgb(55, 212, 178);
+}
+.logo{
+    width: 550px;
+    height: 550px;
+    margin-left: 200px;
+    margin-top: 70px;
+    
+}
+
+.getstarted{
+    width: 160px;
+    height: 60px;
+    background-color:#757195 ;
+    border-radius: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position: absolute;
+    color: white;
+    margin-top: 600px;
+    margin-left: 100px;
+    border: white;
+    font-size: 20px;
+}
+
+.getstarted:hover {
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 5px 5px 15px rgb(238, 230, 230);
+  }
