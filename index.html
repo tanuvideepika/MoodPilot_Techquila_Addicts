@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MoodPilot</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="logo.png" alt="MoodPilot logo">
+            <h1>MoodPilot</h1>
+        </div>
+        <div class="user">
+            <img src="user.png" alt="User image">
+            <p>John Doe</p>
+        </div>
+    </nav>
+    <main>
+        <div class="hero">
+            <div class="overlay"></div>
+            <div class="hero-content">
+                <h1>How are you feeling?</h1>
+                <form>
+                    <input type="text" placeholder="Let your thoughts flow">
+                    <button type="submit">Analyse</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p class="quote-text"></p>
+        </div>
+    </footer>
+    <script>
+        const quotes = ["Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle.", "Inspiration does exist, but it must find you working.", "I have stood on a mountain of no's for one yes.", "Courage is like a muscle. We strengthen it by use.", "You are never too old to set another goal or to dream a new dream.", "Don't watch the clock; do what it does. Keep going.", "If you want to live a happy life, tie it to a goal, not to people or things.", "Success is not final, failure is not fatal: it is the courage to continue that counts.", "The future belongs to those who believe in the beauty of their dreams.",];
+
+        const quoteText = document.querySelector(".quote-text");
+        let index = 0;
+
+        function typeWriter() {
+            if (index === quotes.length) {
+                index = 0;
+            }
+            const currentQuote = quotes[index];
+            const speed = 100; // typing speed in milliseconds
+            let charIndex = 0;
+
+            const typingInterval = setInterval(() => {
+                if (charIndex === currentQuote.length) {
+                    clearInterval(typingInterval);
+                    setTimeout(() => {
+                        quoteText.textContent = "";
+                        index++;
+                        typeWriter();
+                    }, 3000); // time to wait before typing the next quote
+                    return;
+                }
+                quoteText.textContent += currentQuote.charAt(charIndex);
+                charIndex++;
+            }, speed);
+        }
+
+        typeWriter();
+
+    </script>
+</body>
+
+</html>
