@@ -8,6 +8,35 @@ body{
     margin-top: 70px;
     
 }
+.floating-btn {
+    display: block;
+    border: 2.5px solid #d4af37;
+    position: fixed;
+    bottom: 30px;
+    left: 60px;
+    z-index: 999;
+    width: 100px;
+    height: 100px;
+    background-color: #765bd7;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .floating-btn:hover {
+    background-color: #5825b8;
+    box-shadow:2px 2px 5px #5825b8;
+  }
+  
+  .floating-btn span {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
 
 .getstarted{
     width: 160px;
