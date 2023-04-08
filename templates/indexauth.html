@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MoodPilot</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/sidebar.css">
+
+</head>
+
+<body>
+    <nav style="z-index: 1; margin-top: 0; ">
+        <div class="logo">
+            <img src="../static/assets/toplogo.png" alt="MoodPilot logo"
+                style="border: 0.25px solid aliceblue; box-shadow: 1px 1px 5px aliceblue;">
+
+        </div>
+        <div class="user">
+            <img src="../static/assets/user.png" alt="User image">
+            Username
+        </div>
+    </nav>
+
+    <div id="background">
+        <lottie-player src="https://lottie.host/35e2331e-3437-4f2e-87d3-c483a0488037/O5z1E93zd4.json"
+            background="transparent" speed="1" style="width: 100%; height: 100%; overflow: hidden; z-index: -2;" loop
+            autoplay></lottie-player>
+
+
+        <main style="z-index: 0;">
+            <div class="contents">
+                <div class="hero">
+
+                    <div class="overlay"></div>
+                    <div class="hero-content">
+                        <h1>How are you feeling?</h1>
+                        <form>
+                            <div class="form-group" style="height: 200px; width: 400px;">
+                                <label for="exampleFormControlTextarea1"></label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
+                                    placeholder="Let your thoughts flow"></textarea>
+                            </div>
+                            <button type="submit">Analyse</button>
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="container">
+                <p class="quote-text"></p>
+            </div>
+
+        </main>
+    </div>
+    <div class="wrapper" style="position: absolute; top:0; right: 0; padding-top: 0;">
+    </div>
+    </div>
+    <button id="scroll-down-button" class="fancy-scroll-button">
+        Click me!
+
+        <i class="fas fa-chevron-down"></i>
+    </button>
+    </div>
+
+    <section class="recent-thoughts">
+
+
+        <h2>Your Recent Thoughts</h2>
+        <br>
+        <br>
+        <div id="thoughts-container"></div>
+    </section>
+
+
+    <script>
+        const quotes = ["Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle.", "Inspiration does exist, but it must find you working.", "I have stood on a mountain of no's for one yes.", "Courage is like a muscle. We strengthen it by use.", "You are never too old to set another goal or to dream a new dream.", "Don't watch the clock; do what it does. Keep going.", "If you want to live a happy life, tie it to a goal, not to people or things.", "Success is not final, failure is not fatal: it is the courage to continue that counts.", "The future belongs to those who believe in the beauty of their dreams.",];
+
+        const quoteText = document.querySelector(".quote-text");
+        let index = 0;
+
+        function typeWriter() {
+            if (index === quotes.length) {
+                index = 0;
+            }
+            const currentQuote = quotes[index];
+            const speed = 100; // typing speed in milliseconds
+            let charIndex = 0;
+
+            const typingInterval = setInterval(() => {
+                if (charIndex === currentQuote.length) {
+                    clearInterval(typingInterval);
+                    setTimeout(() => {
+                        quoteText.textContent = "";
+                        index++;
+                        typeWriter();
+                    }, 3000); // time to wait before typing the next quote
+                    return;
+                }
+                quoteText.textContent += currentQuote.charAt(charIndex);
+                charIndex++;
+            }, speed);
+        }
+
+        typeWriter();
+
+        const thoughtsContainer = document.getElementById("thoughts-container");
+
+        window.addEventListener("scroll", () => {
+            const scrollPosition = window.scrollY;
+
+            if (scrollPosition >= 300) {
+                thoughtsContainer.innerHTML = `
+            <div class="thought">Thought 1</div>
+            <div class="thought">Thought 2</div>
+            <div class="thought">Thought 3</div>
+            <div class="thought">Thought 4</div>
+            <div class="thought">Thought 5</div>
+            <div class="thought">Thought 6</div>
+            <div class="thought">Thought 7</div>
+            <div class="thought">Thought 8</div>
+            <div class="thought">Thought 9</div>
+            <div class="thought">Thought 10</div>
+        `;
+            }
+        });
+        const scrollButton = document.getElementById("scroll-down-button");
+
+        scrollButton.addEventListener("click", () => {
+            window.scrollBy({
+                top: window.innerHeight,
+                left: 0,
+                behavior: "smooth",
+            });
+        });
+
+        window.addEventListener("scroll", () => {
+            const scrollPosition = window.scrollY;
+            const screenHeight = window.innerHeight;
+            const scrollButton = document.getElementById("scroll-down-button");
+
+            if (scrollPosition > screenHeight * 0.5) {
+                scrollButton.classList.add("hidden");
+            } else {
+                scrollButton.classList.remove("hidden");
+            }
+        });
+
+
+
+    </script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+
+
+</body>
+
+</html>
