@@ -8,35 +8,6 @@ body{
     margin-top: 70px;
     
 }
-.floating-btn {
-    display: block;
-    border: 2.5px solid #d4af37;
-    position: fixed;
-    bottom: 30px;
-    left: 60px;
-    z-index: 999;
-    width: 100px;
-    height: 100px;
-    background-color: #765bd7;
-    color: #fff;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 60px;
-    text-decoration: none;
-    font-size: 16px;
-  }
-  
-  .floating-btn:hover {
-    background-color: #5825b8;
-    box-shadow:2px 2px 5px #5825b8;
-  }
-  
-  .floating-btn span {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  
 
 .getstarted{
     width: 160px;
@@ -55,4 +26,15 @@ body{
 .getstarted:hover {
     color: rgba(255, 255, 255, 1);
     box-shadow: 5px 5px 15px rgb(238, 230, 230);
+  }
+
+  #preloader{
+    background: url('../assets/jungle_edited.jpg') ;
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    background-size: cover;
+    height : 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
   }

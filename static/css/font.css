@@ -4,3 +4,25 @@ font-family: 'Chivo', sans-serif;
 font-family: 'League Spartan', sans-serif;
 font-family: 'Poppins', sans-serif;
 }
+
+.Moodpilot{
+    margin-top: 10px;
+    margin-left: 5px;
+font-family: 'Satisfy', cursive;
+}
+
+.loader-text{
+    margin-left: 50%;
+    color: #ffffff;
+    margin-top: -50px;
+}
+
+.feeling-font{
+    font-family: 'Babylonica', cursive;
+font-family: 'Chivo', sans-serif;
+font-family: 'League Spartan', sans-serif;
+font-family: 'Merienda', cursive;
+font-family: 'Poppins', sans-serif;
+font-family: 'Satisfy', cursive;
+font-weight: 800;
+}

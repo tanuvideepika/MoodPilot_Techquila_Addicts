@@ -4,28 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+    <title>Mood Pilot</title>
+    <link rel="icon" type="image/x-icon" href="../static/assets/favicon.png">
     <link rel="stylesheet" href="../static/css/index.css">
     <link rel="stylesheet" href="../static/css/font.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Babylonica&family=Chivo&family=League+Spartan:wght@600&family=Poppins:wght@300&display=swap" rel="stylesheet">
+
 </head>
 <body id="text">
-    
+    <div id="preloader"> 
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_raijrjlw.json" background="transparent" speed="0.65" style="width: 500px; height: 400px; margin-top: 150px; margin-left: 550px;" loop autoplay></lottie-player>
+    <h1 id="text" class="loader-text">LOADING...</h1>
+</div>
     <div style="z-index: -1; position: absolute;" >
-        <img src="../static/assets/logomoodpilot.png" class="logo">
+        <img src="../static/assets/favicon.png" class="logo">
     </div>
     <div>
-        <!-- <button class="getstarted" type="submit" onclick= "window.location.href='signup.html'">Get Started</button> -->
-        <a href="signup.html" class="floating-btn">
-            <span style="margin-left: -47px;  position: absolute; font-weight: 500;">Get Started!</span>
-          </a>
-          
-          
-          
+        <button class="getstarted" type="submit" onclick= "window.location.href='signup.html'">Get Started</button>
     </div> 
-    <script type="module" src="../static/js/index.js"></script>
+    <script type="module" src="index.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_ucmstmk4.json"  background="transparent"  speed="0.75"  style="width: 77.5%; height: 100%; z-index: 0; float: right; overflow: hidden; margin-bottom: auto;"  loop  autoplay ></lottie-player>
+<script>
+    var loader= document.getElementById("preloader");
+    // window.addEventListener("load", function(){
+    //     loader.style.display= "none";
+    // })
+    setTimeout(function(){
+        loader.style.display= "none";
+     }, 2000)
+</script>
 </body>
 </html>

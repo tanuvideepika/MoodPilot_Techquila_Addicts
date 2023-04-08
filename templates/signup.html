@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mood Pilot</title>
+    <link rel="icon" type="image/x-icon" href="../static/assets/favicon.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="../static/css/font.css">
 <link href="https://fonts.googleapis.com/css2?family=Babylonica&family=Chivo&family=League+Spartan:wght@600&family=Poppins:wght@300&display=swap" rel="stylesheet">
 </head>
-<body  id="text" style="background-image: url('../static/assets/jungle_edited.jpg'); background-repeat: no-repeat; background-attachment: fixed;
+<body  id="text" style="background-image: url('jungle_edited.jpg'); background-repeat: no-repeat; background-attachment: fixed;
 background-size: cover;">
     <section class="vh-100" style="height:800px; width: 100%">
         <div class="container h-100">
@@ -24,12 +25,12 @@ background-size: cover;">
       
                       <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4" style="position:relative; font-weight:700;">SIGN UP</p>
       
-                      <form class="mx-1 mx-md-4" style="margin-left: 4.0rem!important;" id="form">
+                      <form class="mx-1 mx-md-4" style="margin-left: 4.0rem!important;" id="form" action="">
       
                         <div class="d-flex flex-row align-items-center mb-4">
                           <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                           <div class="form-outline flex-fill mb-0">
-                            <input type="text" id="name" class="form-control" />
+                            <input type="text" id="name" class="form-control" required />
                             <label class="form-label" for="name">Your Name</label>
                           </div>
                         </div>
@@ -37,7 +38,7 @@ background-size: cover;">
                         <div class="d-flex flex-row align-items-center mb-4">
                           <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                           <div class="form-outline flex-fill mb-0">
-                            <input type="email" id="email" class="form-control" />
+                            <input type="email" id="email" class="form-control" required/>
                             <label class="form-label" for="email">Your Email</label>
                           </div>
                         </div>
@@ -45,7 +46,7 @@ background-size: cover;">
                         <div class="d-flex flex-row align-items-center mb-4">
                           <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                           <div class="form-outline flex-fill mb-0">
-                            <input type="password" id="password" class="form-control" />
+                            <input type="password" id="password" class="form-control" required />
                             <label class="form-label" for="password">Password</label>
                           </div>
                         </div>
@@ -59,13 +60,13 @@ background-size: cover;">
                         </div> -->
            
                         <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                          <button type="button" class="btn btn-primary btn-lg" id="registerBtn" style="    height: 50px;
+                          <button type="submit" class="btn btn-primary btn-lg" id="registerBtn" style="    height: 50px;
                           width: 180px;
                           margin-top: -15px; margin-left: -25px;
                           background-color: #19e;" onclick= "window.location.href='indexauth.html'">Register</button>
                            <p style=" margin-left: -10px;
-                           position: fixed;
-                           margin-top: 33px;
+                           position: absolute;
+                           margin-top: 40px;
                            font-size: small;" > Already Registered?  <a href="signin.html">Click Here to Login</a></p>
                         </div>
       
