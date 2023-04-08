@@ -3,13 +3,16 @@
 
 <head>
     <title>MoodPilot</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/sidebar.css">
+
 </head>
 
 <body>
     <nav>
         <div class="logo">
-            <img src="../static/assets/logomoodpilot.png" alt="MoodPilot logo">
+            <img src="../static/assets/favicon.png" alt="MoodPilot logo">
             <h1>MoodPilot</h1>
         </div>
         <div class="user">
@@ -23,12 +26,80 @@
             <div class="hero-content">
                 <h1>How are you feeling?</h1>
                 <form>
-                    <input type="text" placeholder="Let your thoughts flow">
-                    <button type="submit">Analyse</button>
+                    <div class="form-group" style="height: 200px; width: 400px;">
+                        <label for="exampleFormControlTextarea1" ></label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Let your thoughts flow"></textarea>
+                      </div>  
+                    <button type="submit" >Analyse</button>
                 </form>
+                
             </div>
         </div>
     </main>
+    <div class="wrapper">
+        <!--Top menu -->
+        <div class="sidebar">
+           <!--profile image & text-->
+           <div class="profile">
+            <!-- <img src="https://1.bp.blogspot.com/-vhmWFWO2r8U/YLjr2A57toI/AAAAAAAACO4/0GBonlEZPmAiQW4uvkCTm5LvlJVd_-l_wCNcBGAsYHQ/s16000/team-1-2.jpg" alt="profile_picture">
+            --> <h3>Your Recent Thoughts</h3> 
+          
+        </div>
+            <!--menu item-->
+            <ul>
+                <li>
+                    <a href="#" class="active">
+                        <span class="icon"><i class="fas fa-home"></i></span>
+                        <span class="item"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-desktop"></i></span>
+                        <span class="item"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-user-friends"></i></span>
+                        <span class="item"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-tachometer-alt"></i></span>
+                        <span class="item"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-database"></i></span>
+                        <span class="item"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-chart-line"></i></span>
+                        <span class="item"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-user-shield"></i></span>
+                        <span class="item"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-cog"></i></span>
+                        <span class="item"></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        </div>
+
+    </div>
     <footer>
         <div class="container">
             <p class="quote-text"></p>
