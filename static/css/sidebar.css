@@ -14,9 +14,10 @@
 } */
 
 .wrapper .sidebar{
-    background: rgb(5, 68, 104);
+    background: #054468;
     position: fixed;
-    margin-top: 75px;
+    margin-top: 70px;
+    margin-right: 4px;
     top: 0;
     right: 0;
     width: 300px;

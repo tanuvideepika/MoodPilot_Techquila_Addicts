@@ -2,21 +2,29 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-image: url('../assets/background.jpg');
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    
+}
 
+/* #background{
+    width: 1600px;
+    height: 900px;
+    overflow-y: hidden;
+} */
+
+.contents{
+    position: absolute;
+    left: 750px;
+    top: 100px;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: #203871;
     color: #fff;
     padding: 10px 20px;
+    width: 99.8%;
 }
 
 .logo h1 {
@@ -31,7 +39,8 @@ nav {
 .logo img {
     height: 50px;
     margin-right: 10px;
-    border-radius: 50%;
+    border-radius: 3px;
+    border: 2px aliceblue;
 }
 
 .user {
@@ -45,12 +54,17 @@ nav {
     margin-right: 10px;
 }
 
+#topLogo{
+    border: wheat;
+}
+
 .hero {
     position: relative;
     height: 500px;
-
+    
     background-size: cover;
     background-position: center;
+    z-index: 0;
 }
 
 .overlay {
@@ -113,9 +127,14 @@ footer {
 
 .container {
     margin-bottom: 10px;
+    margin-left: 0;
     padding-bottom: 40px;
     max-width: 960px;
     margin: 0 auto;
+    z-index: 1;
+    position: absolute;
+    left: -15px;
+    top: 550px;
 }
 
 .quote-text {

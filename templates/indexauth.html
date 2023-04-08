@@ -10,18 +10,25 @@
 </head>
 
 <body>
-    <nav>
-        <div class="logo">
-            <img src="../static/assets/logomoodpilot.png" alt="MoodPilot logo">
-            <h1>MoodPilot</h1>
+    <nav style="z-index: 1; margin-top: 0; ">
+        <div class="logo" >
+            <img src="../static/assets/toplogo.png" alt="MoodPilot logo" style="border: 0.25px solid aliceblue; box-shadow: 1px 1px 5px aliceblue;">
+            
         </div>
         <div class="user">
             <img src="../static/assets/user.png" alt="User image">
-            <p>John Doe</p>
+            Username
         </div>
     </nav>
-    <main>
+    
+    <div id="background">
+    <lottie-player src="https://lottie.host/35e2331e-3437-4f2e-87d3-c483a0488037/O5z1E93zd4.json" background="transparent" speed="1" style="width: 100%; height: 100%; overflow: hidden; z-index: -2;" loop autoplay></lottie-player>
+    
+    
+    <main style="z-index: 0;" >
+        <div class="contents">
         <div class="hero">
+            
             <div class="overlay"></div>
             <div class="hero-content">
                 <h1>How are you feeling?</h1>
@@ -34,18 +41,24 @@
                 </form>
                 
             </div>
+            
         </div>
+    </div>
+        <div class="container">
+            <p class="quote-text"></p>
+        </div>
+
     </main>
-    <div class="wrapper">
-        <!--Top menu -->
+</div>
+    <div class="wrapper" style="position: absolute; top:0; right: 0; padding-top: 0;">
+        
         <div class="sidebar">
-           <!--profile image & text-->
+           
            <div class="profile">
-            <!-- <img src="https://1.bp.blogspot.com/-vhmWFWO2r8U/YLjr2A57toI/AAAAAAAACO4/0GBonlEZPmAiQW4uvkCTm5LvlJVd_-l_wCNcBGAsYHQ/s16000/team-1-2.jpg" alt="profile_picture">
-            --> <h3>Your Recent Thoughts</h3> 
+            <h3>Your Recent Thoughts</h3> 
           
         </div>
-            <!--menu item-->
+            
             <ul>
                 <li>
                     <a href="#" class="active">
@@ -100,11 +113,9 @@
         </div>
 
     </div>
-    <footer>
-        <div class="container">
-            <p class="quote-text"></p>
-        </div>
-    </footer>
+    
+        
+    
     <script>
         const quotes = ["Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle.", "Inspiration does exist, but it must find you working.", "I have stood on a mountain of no's for one yes.", "Courage is like a muscle. We strengthen it by use.", "You are never too old to set another goal or to dream a new dream.", "Don't watch the clock; do what it does. Keep going.", "If you want to live a happy life, tie it to a goal, not to people or things.", "Success is not final, failure is not fatal: it is the courage to continue that counts.", "The future belongs to those who believe in the beauty of their dreams.",];
 
@@ -137,6 +148,10 @@
         typeWriter();
 
     </script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> 
+
+
+    
 </body>
 
 </html>
