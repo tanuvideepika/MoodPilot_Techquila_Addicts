@@ -34,10 +34,11 @@ documents.forEach(doc => {
   // console.log(list)
   var table = document.getElementById("myTable");
   var row = table.insertRow(0);
+  
   var cell1 = row.insertCell(0);
-  var cell2 = row.insertCell(1);
+  //var cell2 = row.insertCell(1);
   cell1.innerHTML = `${doc.user_text}`;
-  cell2.innerHTML =  `${doc.user_mood}`;
+  //cell2.innerHTML =  `${doc.user_mood}`;
 });
 
 document.body.appendChild(list);
